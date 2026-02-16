@@ -5,9 +5,9 @@ const port = 3000;
 app.use(express.json());
 
 let products = [
-    { id: 1, name: 'Смартфон SuperPhone 15', price: 79999 },
-    { id: 2, name: 'Ноутбук ProBook Ultra', price: 124999 },
-    { id: 3, name: 'Беспроводные наушники AirSound', price: 8990 }
+    { id: 1, name: 'Телефон', price: 79999 },
+    { id: 2, name: 'Ноутбук', price: 124999 },
+    { id: 3, name: 'Наушники', price: 8990 }
 ];
 
 app.get('/products', (req, res) => {
