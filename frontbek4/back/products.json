@@ -1,0 +1,110 @@
+[
+  {
+    "id": "y5UCq1",
+    "name": "Смартфон Galaxy S23",
+    "category": "Электроника",
+    "description": "Флагманский смартфон с отличной камерой",
+    "price": 79999,
+    "stock": 15,
+    "rating": 4.8
+  },
+  {
+    "id": "UcBFuu",
+    "name": "Ноутбук MacBook Air M2",
+    "category": "Компьютеры",
+    "description": "Тонкий и легкий ноутбук с мощным процессором",
+    "price": 124999,
+    "stock": 8,
+    "rating": 4.9
+  },
+  {
+    "id": "9X7G7F",
+    "name": "Наушники Sony WH-1000XM5",
+    "category": "Аудио",
+    "description": "Беспроводные наушники с шумоподавлением",
+    "price": 29990,
+    "stock": 23,
+    "rating": 4.7
+  },
+  {
+    "id": "gh7BHi",
+    "name": "Планшет iPad Air",
+    "category": "Электроника",
+    "description": "Универсальный планшет для работы и развлечений",
+    "price": 54990,
+    "stock": 12,
+    "rating": 4.8
+  },
+  {
+    "id": "VSxJPZ",
+    "name": "Умные часы Apple Watch",
+    "category": "Гаджеты",
+    "description": "Стильные умные часы с множеством функций",
+    "price": 34990,
+    "stock": 7,
+    "rating": 4.6
+  },
+  {
+    "id": "z9Yo2k",
+    "name": "Кофемашина DeLonghi",
+    "category": "Для дома",
+    "description": "Автоматическая кофемашина для идеального эспрессо",
+    "price": 45990,
+    "stock": 5,
+    "rating": 4.9
+  },
+  {
+    "id": "ba2sFf",
+    "name": "Фитнес-браслет Xiaomi",
+    "category": "Гаджеты",
+    "description": "Отслеживание активности и пульса",
+    "price": 2990,
+    "stock": 42,
+    "rating": 4.5
+  },
+  {
+    "id": "6ee83B",
+    "name": "Внешний SSD 1TB",
+    "category": "Компьютеры",
+    "description": "Быстрый внешний накопитель",
+    "price": 8990,
+    "stock": 18,
+    "rating": 4.7
+  },
+  {
+    "id": "C0mJcr",
+    "name": "Клавиатура механическая",
+    "category": "Аксессуары",
+    "description": "Механическая клавиатура с подсветкой",
+    "price": 5990,
+    "stock": 11,
+    "rating": 4.6
+  },
+  {
+    "id": "9zdVg_",
+    "name": "Монитор 27\" 4K",
+    "category": "Компьютеры",
+    "description": "Профессиональный монитор с высокой цветопередачей",
+    "price": 32990,
+    "stock": 6,
+    "rating": 4.8
+  },
+  {
+    "id": "LKJ0Uc",
+    "name": "Робот-пылесос",
+    "category": "Для дома",
+    "description": "Умный пылесос с лазерной навигацией",
+    "price": 24990,
+    "stock": 9,
+    "rating": 4.7
+  },
+  {
+    "id": "E4WpWS",
+    "name": "Электронная книга",
+    "category": "Электроника",
+    "description": "С дисплеем без бликов",
+    "price": 15990,
+    "stock": 14,
+    "rating": 4.5
+  }
+]
