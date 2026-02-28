@@ -1,16 +1,19 @@
-$primary-color: #3498db;
-$text-dark: #333333;
-$border-radius-lg: 12px;
-$box-shadow-default: 0 4px 8px rgba(0, 0, 0, 0.1);
+// Основные переменные стилей
+$primary-color: #3498db;                    // Основной цвет бренда (кнопки)
+$text-dark: #333333;                         // Цвет основного текста
+$border-radius-lg: 12px;                     // Радиус скругления карточки
+$box-shadow-default: 0 4px 8px rgba(0, 0, 0, 0.1); // Стандартная тень
 
+// Миксин для стилизации изображения товара
 @mixin product-image-style {
     width: 100%;
     height: auto;
-    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    border-radius: $border-radius-lg $border-radius-lg 0 0; // Скругление только сверху
     display: block;
-    object-fit: cover;
+    object-fit: cover;                         // Сохраняет пропорции при обрезке
 }
 
+// Карточка товара (БЭМ-блок)
 .product-card {
     max-width: 320px;
     border: 1px solid #eee;
@@ -18,43 +21,48 @@ $box-shadow-default: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-shadow: $box-shadow-default;
     font-family: Arial, sans-serif;
     background-color: #fff;
-    overflow: hidden;
+    overflow: hidden;                           // Скрывает выходящее за границы
     transition: transform 0.2s ease;
 
     @if $text-dark == #333333 {
         color: $text-dark;
     }
 
+    // Эффект при наведении на карточку
     &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-5px);            // Подъем карточки вверх
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
+    // Элемент: изображение
     &__image {
         @include product-image-style;
 
         img {
             width: 100%;
-            display: block;
+            display: block;                      // Убирает отступы снизу
         }
     }
 
+    // Элемент: заголовок
     &__title {
         font-size: 1.25rem;
         margin: 16px 16px 8px 16px;
         font-weight: bold;
     }
 
+    // Элемент: описание
     &__description {
         font-size: 0.95rem;
         margin: 0 16px 16px 16px;
         line-height: 1.5;
-        color: lighten($text-dark, 20%);
+        color: lighten($text-dark, 20%);        // Осветленный цвет для второстепенного текста
     }
 
+    // Элемент: кнопка
     &__button {
         display: block;
-        width: calc(100% - 32px);
+        width: calc(100% - 32px);                // Ширина с учетом отступов
         margin: 0 16px 20px 16px;
         padding: 10px;
         background-color: $primary-color;
@@ -65,8 +73,9 @@ $box-shadow-default: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
         transition: background-color 0.3s;
 
+        // Эффект при наведении на кнопку
         &:hover {
-            background-color: darken($primary-color, 10%);
+            background-color: darken($primary-color, 10%); // Затемнение при наведении
         }
     }
 }

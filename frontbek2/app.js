@@ -2,18 +2,22 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// Middleware для парсинга JSON в body запросов
 app.use(express.json());
 
+// Тестовые данные
 let products = [
     { id: 1, name: 'Телефон', price: 79999 },
     { id: 2, name: 'Ноутбук', price: 124999 },
     { id: 3, name: 'Наушники', price: 8990 }
 ];
 
+// Получить все товары
 app.get('/products', (req, res) => {
     res.json(products);
 });
 
+// Получить товар по ID
 app.get('/products/:id', (req, res) => {
     const product = products.find(p => p.id == req.params.id);
     
@@ -24,15 +28,18 @@ app.get('/products/:id', (req, res) => {
     res.json(product);
 });
 
+// Создать новый товар
 app.post('/products', (req, res) => {
     const { name, price } = req.body;
     
+    // Валидация входных данных
     if (!name || !price) {
         return res.status(400).json({ 
             message: 'Необходимо указать название (name) и стоимость (price)' 
         });
     }
     
+    // Используем timestamp как простой уникальный ID
     const newProduct = {
         id: Date.now(),
         name: name,
@@ -40,9 +47,10 @@ app.post('/products', (req, res) => {
     };
     
     products.push(newProduct);
-    res.status(201).json(newProduct);
+    res.status(201).json(newProduct); // 201 = Created
 });
 
+// Обновить существующий товар
 app.patch('/products/:id', (req, res) => {
     const product = products.find(p => p.id == req.params.id);
     
@@ -52,12 +60,14 @@ app.patch('/products/:id', (req, res) => {
     
     const { name, price } = req.body;
     
+    // Обновляем только переданные поля
     if (name !== undefined) product.name = name;
     if (price !== undefined) product.price = price;
     
     res.json(product);
 });
 
+// Удалить товар
 app.delete('/products/:id', (req, res) => {
     const productIndex = products.findIndex(p => p.id == req.params.id);
     
@@ -69,6 +79,7 @@ app.delete('/products/:id', (req, res) => {
     res.json({ message: 'Товар успешно удален' });
 });
 
+// Главная страница с документацией API
 app.get('/', (req, res) => {
     res.send(`
         <h1>API управления товарами</h1>
@@ -83,6 +94,7 @@ app.get('/', (req, res) => {
     `);
 });
 
+// Запуск сервера
 app.listen(port, () => {
     console.log(`Сервер запущен на http://localhost:${port}`);
 });

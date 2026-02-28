@@ -1,55 +1,65 @@
+/* Карточка товара — основной контейнер */
 .product-card {
-  max-width: 320px;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-  color: #333333;
-}
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.product-card__image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px 12px 0 0;
-  display: block;
-  object-fit: cover;
-}
-.product-card__image img {
-  width: 100%;
-  display: block;
-}
-.product-card__title {
-  font-size: 1.25rem;
-  margin: 16px 16px 8px 16px;
-  font-weight: bold;
-}
-.product-card__description {
-  font-size: 0.95rem;
-  margin: 0 16px 16px 16px;
-  line-height: 1.5;
-  color: #666666;
-}
-.product-card__button {
-  display: block;
-  width: calc(100% - 32px);
-  margin: 0 16px 20px 16px;
-  padding: 10px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.product-card__button:hover {
-  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+    max-width: 320px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    overflow: hidden;                /* Скрываем выступающие углы изображения */
+    transition: transform 0.2s ease;
+    color: #333333;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Эффект подъема при наведении */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение товара — занимает всю ширину */
+.product-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;    /* Скругление только сверху */
+    display: block;
+    object-fit: cover;
+}
+
+.product-card__image img {
+    width: 100%;
+    display: block;                   /* Убирает отступ снизу */
+}
+
+/* Заголовок и описание */
+.product-card__title {
+    font-size: 1.25rem;
+    margin: 16px 16px 8px 16px;
+    font-weight: bold;
+}
+
+.product-card__description {
+    font-size: 0.95rem;
+    margin: 0 16px 16px 16px;
+    line-height: 1.5;
+    color: #666666;                    /* Более светлый для второстепенного текста */
+}
+
+/* Кнопка действия */
+.product-card__button {
+    display: block;
+    width: calc(100% - 32px);          /* Учитываем отступы слева и справа */
+    margin: 0 16px 20px 16px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card__button:hover {
+    background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862); /* Затемненный синий */
+}
